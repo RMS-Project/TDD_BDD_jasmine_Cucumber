@@ -4,6 +4,7 @@
  * Module dependencies.
  */
 
+// Chama app.
 var app = require('../app');
 var debug = require('debug')('tdd-bdd-jasmine-cucumber:server');
 var http = require('http');
@@ -12,6 +13,10 @@ var http = require('http');
  * Get port from environment and store in Express.
  */
 
+// Interface de rede (porta) de execução da aplicação. 
+// Normalmente a porta dos servidores em produção é a 80, tão é necessário 
+// configurar a variável de ambiente para se ele possa rodar.
+// Ao setar a porta ele levanta o servidor na porta selecionada.
 var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
